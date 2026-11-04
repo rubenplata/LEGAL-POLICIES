@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Mistories Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: one centered column, name on top, two big tap targets, tiny credit at the foot */
+:root{
+  --bg:#f6f3f7;
+  --surface:#ffffff;
+  --ink:#1d1724;
+  --muted:#6b6275;
+  --line:#e4dde9;
+  --accent:#5b2a86;
+  --accent-ink:#ffffff;
+  --star:#e8a317;
+  --google-blue:#1a73e8;
+  --ig-gradient:linear-gradient(45deg,#feda75 0%,#fa7e1e 25%,#d62976 55%,#962fbf 80%,#4f5bd5 100%);
+  --display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body:"Figtree", -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141018; --surface:#1f1925; --ink:#f3eef6; --muted:#a99fb3; --line:#342b3c;
+    --accent:#b78ae0; --accent-ink:#1a1220; --star:#f2b632; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141018; --surface:#1f1925; --ink:#f3eef6; --muted:#a99fb3; --line:#342b3c;
+  --accent:#b78ae0; --accent-ink:#1a1220; --star:#f2b632; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%;margin:0}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--body); font-size:16px; line-height:1.5;
+  display:flex; justify-content:center;
+}
+.wrap{
+  width:100%; max-width:420px;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:56px 32px;
+  display:flex; flex-direction:column; align-items:center; gap:36px;
+  min-height:100vh; box-sizing:border-box;
+}
+header{display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center}
+.mark{
+  width:76px; height:76px; border-radius:50%;
+  display:grid; place-items:center;
+  background:var(--accent); color:var(--accent-ink);
+  font-family:var(--display); font-weight:700; font-size:34px; letter-spacing:-.02em;
+}
+h1{
+  margin:0; font-family:var(--display); font-weight:700; font-size:2.1rem;
+  line-height:1.05; letter-spacing:-.02em; text-wrap:balance;
+}
+.lead{margin:0; color:var(--muted); max-width:30ch; text-wrap:balance}
+nav{width:100%; display:flex; flex-direction:column; gap:14px}
+.btn{
+  display:flex; align-items:center; gap:14px;
+  padding:16px 18px; border-radius:16px; text-decoration:none;
+  font-weight:600; font-size:1.05rem; line-height:1.25;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn svg{flex:none; width:28px; height:28px}
+.btn .txt{display:flex; flex-direction:column; min-width:0}
+.btn small{font-weight:400; font-size:.85rem; opacity:.8}
+.btn .go{margin-left:auto; flex:none; width:20px; height:20px}
+.logo{flex:none; width:40px; height:40px; border-radius:12px; display:grid; place-items:center; background:#ffffff}
+.logo svg{width:26px; height:26px}
+.btn-google{background:var(--google-blue); color:#ffffff}
+.btn-ig{background:var(--ig-gradient); color:#ffffff}
+.btn-ig .logo{background:rgba(255,255,255,.18)}
+.btn:hover{transform:translateY(-2px); box-shadow:0 10px 22px -12px rgba(0,0,0,.45)}
+.btn:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+.stars{display:flex; gap:3px; color:var(--star)}
+.stars svg{width:16px; height:16px}
+footer{margin-top:auto; font-size:.8rem; color:var(--muted)}
+footer a{color:inherit}
+@media (prefers-reduced-motion: reduce){.btn{transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header>
+    <div class="mark" aria-hidden="true">M</div>
+    <h1>Mistories Studio</h1>
+    <p class="lead">Gracias por tu visita. Tu opinión nos ayuda a crecer.</p>
+    <div class="stars" aria-label="Cinco estrellas">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+    </div>
+  </header>
+
+  <nav aria-label="Enlaces">
+    <a class="btn btn-google" href="https://maps.app.goo.gl/PLTNEPxwUfW4DsSx6" target="_blank" rel="noopener">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 48 48">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+          <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+          <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+        </svg>
+      </span>
+      <span class="txt">Déjanos tu reseña en Google<small>Solo te lleva un minuto</small></span>
+      <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+    <a class="btn btn-ig" href="https://www.instagram.com/mistories_studio" target="_blank" rel="noopener">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4.2"/>
+          <circle cx="17.4" cy="6.6" r="1.2" fill="#ffffff" stroke="none"/>
+        </svg>
+      </span>
+      <span class="txt">Síguenos en Instagram<small>@mistories_studio</small></span>
+      <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+  </nav>
+
+  <footer>Página creada por <a href="https://agenciaplata.com" target="_blank" rel="noopener">Agencia Plata</a></footer>
+</main>
+</body>
+</html>
